@@ -1,0 +1,17 @@
+CREATE TABLE students (id INT,name varchar(20),age INT,major varchar(20),mark INT(100));
+INSERT INTO students(id,name,age,major,mark)
+VALUES(1,'kavi',19,'biology',100),
+      (2,'deepthi',40,'maths',60),
+      (3,'amritham',14,'evs',90),
+      (4,'ramesh',49,'botany',80),
+      (5,'jeyabarathi',43,'chemsitry',74),
+      (6,'kavinvarsha',55,'english',59),
+      (7,'kiruba',20,'tamil',68),
+      (8,'kousalya',21,'physics',86),
+      (9,'madthumitha',22,'history',99),
+      (10,'boomika',13,'ss',88);
+);
+ALTER TABLE students ADD COLUMN email varchar(100);
+UPDATE students SET email='kavi@gmail.com' WHERE id =1;
+SELECT * from students order by age desc;
+SELECT * from students order by age asc;
