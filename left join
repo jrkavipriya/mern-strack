@@ -1,0 +1,8 @@
+CREATE TABLE students(id int,name varchar(20),mark int);
+CREATE TABLE parents(sno int,name varchar(20),age int);
+INSERT INTO students(id,name,mark)VALUES(1,'kavi',99),
+(2,'deepthi',95);
+INSERT into parents(sno,name,age)VALUES(1,'kavi',47),
+(2,'gopala',49);
+SELECT students.name,parents.name from students
+left join parents on students.name=parents.name;
