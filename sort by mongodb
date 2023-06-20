@@ -1,0 +1,49 @@
+use kavi
+switched to db kavi
+db.jeya.insertMany([{rollno:"99",dept:"ece",mark:"66"},{rollno:"57",dept:"eee",mark:"88"},{rollno:"44",dept:"cce",mark:"88"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6491d1482a457fcec158221e"),
+    '1': ObjectId("6491d1482a457fcec158221f"),
+    '2': ObjectId("6491d1482a457fcec1582220")
+  }
+}
+db.jeya.find().sort({rollno:1})
+{
+  _id: ObjectId("6491d1482a457fcec1582220"),
+  rollno: '44',
+  dept: 'cce',
+  mark: '88'
+}
+{
+  _id: ObjectId("6491d1482a457fcec158221f"),
+  rollno: '57',
+  dept: 'eee',
+  mark: '88'
+}
+{
+  _id: ObjectId("6491d1482a457fcec158221e"),
+  rollno: '99',
+  dept: 'ece',
+  mark: '66'
+}
+db.jeya.find().sort({dept:-1})
+{
+  _id: ObjectId("6491d1482a457fcec158221f"),
+  rollno: '57',
+  dept: 'eee',
+  mark: '88'
+}
+
+  _id: ObjectId("6491d1482a457fcec158221e"),
+  rollno: '99',
+  dept: 'ece',
+  mark: '66'
+}
+{
+  _id: ObjectId("6491d1482a457fcec1582220"),
+  rollno: '44',
+  dept: 'cce',
+  mark: '88'
+}
